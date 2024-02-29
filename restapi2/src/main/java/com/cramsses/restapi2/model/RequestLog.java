@@ -26,9 +26,8 @@ public class RequestLog {
 
 	}
 
-	public RequestLog(Integer id, String serviceName, Date request_ts) {
+	public RequestLog(String serviceName, Date request_ts) {
 		super();
-		this.id = id;
 		this.serviceName = serviceName;
 		this.request_ts = request_ts;
 	}

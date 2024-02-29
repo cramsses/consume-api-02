@@ -18,6 +18,7 @@ import com.cramsses.restapi2.service.UserAPIService;
 
 @Controller
 @RequestMapping("/user")
+//CORS TODO 
 public class UserAPIController {
 	
 	@Autowired
@@ -34,7 +35,7 @@ public class UserAPIController {
 	
 	
 	//Get all users
-	@RequestMapping("/users")
+	@RequestMapping("/all")
 	@ResponseBody
 	private List<User> getUsers() {
 	
@@ -46,7 +47,7 @@ public class UserAPIController {
 	
 	
 	//Get user by ID
-	@RequestMapping("/user/{id}")
+	@RequestMapping("/{id}")
 	@ResponseBody
 	private User getUser(@PathVariable Integer id){
 		
