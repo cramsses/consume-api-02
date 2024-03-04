@@ -16,13 +16,13 @@ import com.cramsses.restapi2.model.RequestLog;
 @CrossOrigin(origins = "http://localhost:4200")
 public class RequestLogController {
 	
-	//Add service component as gateway
+	
 	@Autowired
 	private RequestLogRepository logRepository;
 	
 	@RequestMapping("/all")
 	@ResponseBody
-	private List<RequestLog> getAllLogs(){
+	public List<RequestLog> getAllLogs(){
 		List<RequestLog> logs = logRepository.findAll();
 		return logs;
 	}
